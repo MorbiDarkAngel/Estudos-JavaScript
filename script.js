@@ -59,8 +59,28 @@ function finalizar() {
     }
     else {
         let total = novoArray .length
+        let = maior = novoArray[0]
+        let = menor = novoArray[0]
+        let soma = 0
+        let media = 0
+
+        for(let pos in novoArray) {
+            soma += novoArray[pos]
+            if (novoArray[pos] > maior) {
+                maior = novoArray[pos]
+            }
+            if (novoArray[pos] < menor) {
+                menor = novoArray[pos]
+            }
+            
+        }
+        media = soma / total
 
         resultado.innerHTML = ''
         resultado.innerHTML += `<p><b>${total}</b> números cadastrados</p>`
+        resultado.innerHTML += `<p><O maior valor é ${maior}</p>`
+        resultado.innerHTML += `<p>O menor valor é ${total}.</p>`
+        resultado.innerHTML += `<p>A soma é ${soma}</p>`
+        resultado.innerHTML += `<p>A média       é ${media}</p>`
     }
 }
